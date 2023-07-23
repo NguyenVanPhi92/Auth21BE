@@ -2,13 +2,13 @@
     "name": "server",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "app.js",
     "engines": {
         "node": "18.x"
     },
     "scripts": {
-        "start": "node server.js",
-        "server": "nodemon server.js",
+        "start": "node app.js",
+        "server": "nodemon app.js",
         "client": "npm run start --prefix ../client",
         "dev": "concurrently \"npm run server \" \"npm run client\""
     },

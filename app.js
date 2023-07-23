@@ -12,6 +12,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+
 require('dotenv').config()
 
 // db
