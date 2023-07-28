@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const route = express.Router()
 
 const corsOptions = {
     origin: true,
@@ -43,6 +44,11 @@ app.use(cookieParser()) // parser cookies
 app.use('/uploads', express.static('uploads'))
 
 // routes
+app.use(
+    route.get('/', (req, res) => {
+        res.send('server running')
+    })
+)
 app.use(userRoutes)
 app.use(uploadRoutes)
 
